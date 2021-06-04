@@ -261,4 +261,41 @@ FROM dept_emp
 LIMIT 100;
 
 #SECTION 10 : SQL INSERT statement 
+USE employees;
 
+SELECT * 
+FROM titles
+LIMIT 10;
+
+INSERT INTO employees
+VALUES
+(
+999903,
+'1986-04-21',
+'John',
+'Smith',
+'M',
+'1997-10-01'
+);
+
+INSERT INTO titles
+(emp_no,title,from_date)
+VALUES
+(999903,'Senior Engineer','1997-10-01');
+
+SELECT *
+FROM titles
+ORDER BY emp_no DESC;
+
+SELECT *
+FROM dept_emp
+ORDER BY emp_no DESC
+LIMIT 10;
+
+INSERT INTO dept_emp
+(emp_no,dept_no,from_date,to_date)
+VALUES
+(999903,'d005','1997-10-01','9999-01-01');
+
+INSERT INTO departments 
+VALUES('d010','Business Analysis');
