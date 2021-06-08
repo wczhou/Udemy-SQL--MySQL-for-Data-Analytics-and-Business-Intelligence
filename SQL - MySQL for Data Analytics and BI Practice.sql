@@ -299,3 +299,12 @@ VALUES
 
 INSERT INTO departments 
 VALUES('d010','Business Analysis');
+
+#Section 11: the UPDATE statement
+UPDATE departments
+SET dept_name = 'Data Analysis'
+WHERE dept_no = 'd010';
+
+SELECT *
+FROM departments
+WHERE dept_no = 'd010';
